@@ -1,14 +1,18 @@
-name: "sql-anti-pattern-detector"
+name: sql-anti-pattern-detector
+version: 1.0.0
 description: "Scans SQL text for SELECT *, leading wildcards, and unindexed conversions"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "sql_anti_pattern_detector.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     sql_query:
-      type: "string"
+      type: string
       description: "SQL statement string"
   required:
-    - "sql_query"
+    - sql_query
+implementation:
+  type: script
+  path: sql_anti_pattern_detector.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

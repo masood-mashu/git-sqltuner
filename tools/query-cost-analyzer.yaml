@@ -1,14 +1,18 @@
-name: "query-cost-analyzer"
+name: query-cost-analyzer
+version: 1.0.0
 description: "Parses execution plan total cost and validates against organizational SLA threshold"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "query_cost_analyzer.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     plan_json:
-      type: "string"
+      type: string
       description: "JSON representation of database EXPLAIN plan"
   required:
-    - "plan_json"
+    - plan_json
+implementation:
+  type: script
+  path: query_cost_analyzer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
