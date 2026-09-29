@@ -1,0 +1,14 @@
+name: "missing-index-advisor"
+description: "Detects sequential scans on large tables and recommends B-tree or GiST indexes"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "missing_index_advisor.py"
+parameters:
+  type: "object"
+  properties:
+    scan_metrics_json:
+      type: "string"
+      description: "JSON with scan type, table name, and row count"
+  required:
+    - "scan_metrics_json"

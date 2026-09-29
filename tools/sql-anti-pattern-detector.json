@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "detect_sql_anti_patterns",
+  "description": "Scans SQL text for SELECT *, leading wildcards, and unindexed conversions",
+  "type": "object",
+  "properties": {
+    "sql_query": {
+      "type": "string",
+      "description": "SQL statement string"
+    }
+  },
+  "required": [
+    "sql_query"
+  ]
+}

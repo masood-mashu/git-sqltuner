@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "advise_missing_indexes",
+  "description": "Detects sequential scans on large tables and recommends B-tree or GiST indexes",
+  "type": "object",
+  "properties": {
+    "scan_metrics_json": {
+      "type": "string",
+      "description": "JSON with scan type, table name, and row count"
+    }
+  },
+  "required": [
+    "scan_metrics_json"
+  ]
+}

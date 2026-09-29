@@ -1,0 +1,25 @@
+spec_version: "0.1.0"
+name: "git-sqltuner"
+version: "0.1.0"
+description: "Autonomous SQL Query Plan Optimizer, Missing Index Advisor & Anti-Pattern Sentry"
+framework: "opengap"
+authors:
+  - name: "masood-mashu"
+    email: "masoodmashu03@gmail.com"
+license: "Apache-2.0"
+
+runtime:
+  language: "python"
+  version: ">=3.10"
+  timeout: 120
+
+tags:
+  - data-analytics
+  - sql-tuning
+  - query-optimization
+  - database-indexing
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-sqltuner-01"
+  passport_category: "Data & analytics"
